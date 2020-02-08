@@ -171,3 +171,18 @@
 .data-value {
     margin-left: 20px;
 }
+
+
+@media (max-width: 620px) {
+    .country-sm {
+        font-size: 10px;
+        width: 72%;
+    }
+}
+
+@media (max-width: 390px) {
+    .country-sm {
+        font-size: 10px;
+        width: 67%;
+    }
+}
