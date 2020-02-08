@@ -31,8 +31,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
-                header
+            <div className="app-header">
                 <AutoSuggestion
                     dataAccessor={this.getCountriesData}
                     onSelect={this.onSelect}
