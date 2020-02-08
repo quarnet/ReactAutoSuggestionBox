@@ -9,7 +9,7 @@ const mapStateToProps = state => {
 
 const CountryFull = props => {
 
-    let renderElem = props.countryData ? <div>countrydata</div> : <div>no country selected</div>;
+let renderElem = props.countryData ? <div>{props.countryData.name}</div> : <div>no country selected</div>;
     return renderElem;
 }
 

@@ -1,6 +1,6 @@
-import { GET_ALL_COUNTRIES, SET_ERROR } from "./actionTypes"
+import { GET_ALL_COUNTRIES, SET_ERROR, SET_ACTIVE_COUNTRY } from "./actionTypes"
 import { GetAllCountries } from "../Utils/api";
-import { getCountriesFromLocalStorage, setCountriesToLocalStorage } from "../Utils/utils";
+import { getCountriesFromLocalStorage, setCountriesToLocalStorage, parseApiToCountry } from "../Utils/utils";
 
 const getAllCountries = list => {
     return {
@@ -20,16 +20,25 @@ const setError = error => {
     }
 }
 
+export const setActiveCountry = country => {
+    return {
+        type: SET_ACTIVE_COUNTRY,
+        payload: {
+            country: country
+        }
+    }
+}
+
 export const getAllCountriesAsync = () => {
     return dispatch => {
         const AllCountryData = getCountriesFromLocalStorage();
         if (AllCountryData) {
-            dispatch(getAllCountries(AllCountryData));
+            dispatch(getAllCountries(AllCountryData.map(c => parseApiToCountry(c))));
             return Promise.resolve(true);
         }
 
         return GetAllCountries().then(countries => {
-            dispatch(getAllCountries(countries));
+            dispatch(getAllCountries(countries.map(c => parseApiToCountry(c))));
             setCountriesToLocalStorage(countries);
             return true;
         }).catch(err => {

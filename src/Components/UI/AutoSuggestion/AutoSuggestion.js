@@ -93,21 +93,24 @@ class AutoSuggestion extends Component {
                 const {options} = this.state;
                 if (options.length && oldActiveIndex >= 0 && oldActiveIndex <= options.length) {
                     this.setState({
-                        showOptions: false
+                        showOptions: false,
+                        keyword: '',
+                        activeIndex: -1,
+                        options: []
                     })
                     this.onSelect(options[oldActiveIndex]);
                 }
-                break;
+                return;
             }
             case 27: {
                 //escape
                 this.setState({
                     showOptions: false
-                })
-                break;
+                });
+                return;
             }
             default:
-                break;
+                return;
         }
 
         if (newActiveIndex !== oldActiveIndex) {
