@@ -1,14 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getAllCountriesAsync } from '../../Store/actions';
 
 const mapStateToProps = state => {
     return {
-        isError: state.isError
+        isError: state.isError,
+        countries: state.allCountries
     };
 }
 
-const Header = (props) => {
-    return props.isError ? <div>Error</div> : <div>No Error</div>;
+const mapDispatchToProps = dispatch => {
+    return {
+        getCountries: () => dispatch(getAllCountriesAsync())
+    };
+};
+
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+    }
+
+    componentWillMount() {
+        this.props.getCountries().then(res => {
+            
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                header
+            </div>
+        );
+    }
 }
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
