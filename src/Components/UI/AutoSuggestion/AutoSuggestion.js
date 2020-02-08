@@ -118,6 +118,16 @@ class AutoSuggestion extends Component {
         }
     }
 
+    optionSelected = option => {
+        this.setState({
+            showOptions: false,
+            keyword: '',
+            activeIndex: -1,
+            options: []
+        })
+        this.onSelect(option);
+    }
+
     render() {
         return (
             <div className="suggestionbox-container">
@@ -140,7 +150,8 @@ class AutoSuggestion extends Component {
                                                 <SuggestionOption
                                                     key={option.name}
                                                     optionData={option}
-                                                    isActive={isActive}>
+                                                    isActive={isActive}
+                                                    clicked={this.optionSelected}>
                                                 </SuggestionOption>
 
                                             );

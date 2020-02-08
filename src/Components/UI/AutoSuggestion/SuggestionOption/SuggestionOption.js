@@ -5,7 +5,7 @@ import CountryFlag from './CountryFlag';
 const SuggestionOption = (props) => {
     const { optionData, isActive } = props;
     return (
-        <div className={['suggestion-option', isActive ? 'active' : ''].join(' ')}>
+        <div className={['suggestion-option', isActive ? 'active' : ''].join(' ')} onClick={() => props.clicked(optionData)}>
             <div className="country-flag-sm">
                 <CountryFlag url={optionData.flag} imgClass="country-flag-wrapper"></CountryFlag>
             </div>

@@ -60,6 +60,12 @@
     width: 100%;
     text-align: left;
     border-bottom: 1px solid #cccccc4a;
+    cursor: pointer;
+}
+
+.suggestion-option:hover {
+    color: white;
+    border: 1px solid white !important;
 }
 
 .country-sm {
