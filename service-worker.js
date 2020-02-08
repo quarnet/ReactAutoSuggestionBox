@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ReactAutoSuggestionBox/precache-manifest.ba98b2f73e96619501a7666b992b38ce.js"
+  "/ReactAutoSuggestionBox/precache-manifest.17531ffdf413f1627e814e95e12f43f7.js"
 );
 
 self.addEventListener('message', (event) => {
