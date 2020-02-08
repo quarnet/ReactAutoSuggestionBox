@@ -35,3 +35,5 @@ export const parseApiToCountry = apiRes => {
 
     return country;
 }
+
+export const capitalize = inputString => inputString.toUpperCase();

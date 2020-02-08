@@ -1,6 +1,7 @@
 
 .active {
-    color: red;
+    color: white;
+    border: 1px solid white !important;
 }
 
 .app-header {
@@ -50,4 +51,117 @@
     background-color: #000;
     border: 1px solid #ccc;
     width: 97%;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.suggestion-option {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #cccccc4a;
+}
+
+.country-sm {
+    display: inline-block;
+    font-size: 13px;
+    text-align: left;
+    width: 82%;
+    height: 45px;
+    vertical-align: middle;
+    margin-left: 10px;
+    border-left: 1px solid #cccccc4a;
+    padding-left: 8px;
+}
+.country-row {
+    padding-top: 2px;
+    color: #fff;
+}
+.country-detail-row {
+    padding-top: 2px;
+    color: #929292d1;
+}
+.country-flag-sm {
+    width: 45px;
+    height: 100%;
+    display: inline-block;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.country-flag-wrapper, .flag-img {
+    height: 100%;
+    width: 100%;
+}
+.country-flag-wrapper {
+    padding: 2px;
+}
+
+.flag-img {
+    vertical-align: middle;
+}
+
+.empty-country {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.country-details-wrapper {
+    height: 100%;
+    width: 100%;
+    font-size: 0.65em;
+    max-width: 400px;
+    margin: auto;
+}
+
+.country-details {
+    padding: 10px;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.country-flag-bg {
+    /* max-width: 325px;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top; */
+    max-width: 400px;
+}
+
+.flag-big {
+
+}
+
+.country-bg-main {
+    /* display: inline-block;
+    max-width: 544px;
+    width: 60%;
+    margin-left: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    vertical-align: top; */
+}
+
+.tbl {
+    display: table;
+}
+
+.tbl-row {
+    display: table-row;
+}
+
+.tbl-cell {
+    display: table-cell;
+}
+
+.data-label {
+    font-weight: bolder;
+}
+
+.data-value {
+    margin-left: 20px;
 }
