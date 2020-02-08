@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getEditDistance } from '../../../Utils/levenshtein';
+import SuggestionOption from './SuggestionOption/SuggestionOption';
 
 class AutoSuggestion extends Component {
     dataAccessor = this.props.dataAccessor;
@@ -134,13 +135,14 @@ class AutoSuggestion extends Component {
                                 <ul className="suggestionbox-options">
                                     {
                                         this.state.options.map((option, index) => {
-                                            const classes = ['option'];
-                                            if (index === this.state.activeIndex)
-                                                classes.push('active');
+                                            const isActive = index === this.state.activeIndex;
                                             return (
-                                                <li key={option.name} className={classes.join(' ')}>
-                                                    {option.name}
-                                                </li>
+                                                <SuggestionOption
+                                                    key={option.name}
+                                                    optionData={option}
+                                                    isActive={isActive}>
+                                                </SuggestionOption>
+
                                             );
                                         })
                                     }
