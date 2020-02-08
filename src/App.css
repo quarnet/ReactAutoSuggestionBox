@@ -51,6 +51,9 @@
     background-color: #000;
     border: 1px solid #ccc;
     width: 97%;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .suggestion-option {
@@ -96,4 +99,69 @@
 
 .flag-img {
     vertical-align: middle;
+}
+
+.empty-country {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.country-details-wrapper {
+    height: 100%;
+    width: 100%;
+    font-size: 0.65em;
+    max-width: 400px;
+    margin: auto;
+}
+
+.country-details {
+    padding: 10px;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.country-flag-bg {
+    /* max-width: 325px;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top; */
+    max-width: 400px;
+}
+
+.flag-big {
+
+}
+
+.country-bg-main {
+    /* display: inline-block;
+    max-width: 544px;
+    width: 60%;
+    margin-left: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    vertical-align: top; */
+}
+
+.tbl {
+    display: table;
+}
+
+.tbl-row {
+    display: table-row;
+}
+
+.tbl-cell {
+    display: table-cell;
+}
+
+.data-label {
+    font-weight: bolder;
+}
+
+.data-value {
+    margin-left: 20px;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getEditDistance } from '../../../Utils/levenshtein';
 import SuggestionOption from './SuggestionOption/SuggestionOption';
-
+const limiter = 10;
 class AutoSuggestion extends Component {
     dataAccessor = this.props.dataAccessor;
     onSelect = this.props.onSelect;
@@ -39,7 +39,7 @@ class AutoSuggestion extends Component {
                 ...option,
                 d: s
             };
-        }).sort((a, b) => a.d - b.d).slice(0, 15);
+        }).sort((a, b) => a.d - b.d).slice(0, limiter);
 
         this.setState({
             options: filteredOptions
@@ -70,7 +70,7 @@ class AutoSuggestion extends Component {
         switch (key) {
             case 38: {
                 //top
-                newActiveIndex--;
+                newActiveIndex = newActiveIndex === 0 ? this.state.options.length - 1 : newActiveIndex - 1;
                 break;
             }
             case 37: {
@@ -83,7 +83,7 @@ class AutoSuggestion extends Component {
             }
             case 40: {
                 //bottom
-                newActiveIndex++;
+                newActiveIndex = newActiveIndex === this.state.options.length - 1 ? 0 : newActiveIndex + 1;
                 break;
             }
             case 13: {
