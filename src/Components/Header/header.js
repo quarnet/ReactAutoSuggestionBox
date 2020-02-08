@@ -24,11 +24,18 @@ class Header extends Component {
         });
     }
 
+    onSelect = (selectedOption) => {
+
+    }
+
     render() {
         return (
             <div>
                 header
-                <AutoSuggestion dataAccessor={this.getCountriesData}></AutoSuggestion>
+                <AutoSuggestion 
+                dataAccessor={this.getCountriesData}
+                onSelect={this.onSelect}
+                ></AutoSuggestion>
             </div>
         );
     }
