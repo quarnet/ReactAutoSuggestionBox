@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ReactAutoSuggestionBox/static/css/main.916b80fc.chunk.css",
+    "main.js": "/ReactAutoSuggestionBox/static/js/main.1cbf91e1.chunk.js",
+    "main.js.map": "/ReactAutoSuggestionBox/static/js/main.1cbf91e1.chunk.js.map",
+    "runtime-main.js": "/ReactAutoSuggestionBox/static/js/runtime-main.40db91c7.js",
+    "runtime-main.js.map": "/ReactAutoSuggestionBox/static/js/runtime-main.40db91c7.js.map",
+    "static/js/2.620addf6.chunk.js": "/ReactAutoSuggestionBox/static/js/2.620addf6.chunk.js",
+    "static/js/2.620addf6.chunk.js.map": "/ReactAutoSuggestionBox/static/js/2.620addf6.chunk.js.map",
+    "index.html": "/ReactAutoSuggestionBox/index.html",
+    "precache-manifest.0cd0da2540acd2f111972f477bfc319e.js": "/ReactAutoSuggestionBox/precache-manifest.0cd0da2540acd2f111972f477bfc319e.js",
+    "service-worker.js": "/ReactAutoSuggestionBox/service-worker.js",
+    "static/css/main.916b80fc.chunk.css.map": "/ReactAutoSuggestionBox/static/css/main.916b80fc.chunk.css.map",
+    "static/js/2.620addf6.chunk.js.LICENSE.txt": "/ReactAutoSuggestionBox/static/js/2.620addf6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40db91c7.js",
+    "static/js/2.620addf6.chunk.js",
+    "static/css/main.916b80fc.chunk.css",
+    "static/js/main.1cbf91e1.chunk.js"
+  ]
+}
