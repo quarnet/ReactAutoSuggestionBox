@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAllCountriesAsync } from '../../Store/actions';
+import AutoSuggestion from '../UI/AutoSuggestion/AutoSuggestion';
 
 const mapStateToProps = state => {
     return {
@@ -16,23 +17,18 @@ const mapDispatchToProps = dispatch => {
 };
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
 
-        }
-    }
-
-    componentWillMount() {
-        this.props.getCountries().then(res => {
-            
-        })
+    getCountriesData = () => {
+        return this.props.getCountries().then(res => {
+            return this.props.countries;
+        });
     }
 
     render() {
         return (
             <div>
                 header
+                <AutoSuggestion dataAccessor={this.getCountriesData}></AutoSuggestion>
             </div>
         );
     }
