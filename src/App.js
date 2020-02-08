@@ -8,6 +8,11 @@ function App() {
     <div className="App">
       <Header></Header>
       <CountryFull></CountryFull>
+      <div className="footer">
+        <div>
+          patelaxay47@gmail.com
+        </div>
+      </div>
     </div>
   );
 }
