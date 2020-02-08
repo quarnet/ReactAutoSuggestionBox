@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d5f29e3819b84f20308b957d6f8a5480",
+    "revision": "68543bcf031857c20880a40c481beb54",
     "url": "/ReactAutoSuggestionBox/index.html"
   },
   {
-    "revision": "d1a2b7d4e16761489fea",
-    "url": "/ReactAutoSuggestionBox/static/css/main.a8542959.chunk.css"
+    "revision": "99065c1dac69fa06ad6b",
+    "url": "/ReactAutoSuggestionBox/static/css/main.20afc98f.chunk.css"
   },
   {
     "revision": "66c4a786a45837c63451",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactAutoSuggestionBox/static/js/2.620addf6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d1a2b7d4e16761489fea",
+    "revision": "99065c1dac69fa06ad6b",
     "url": "/ReactAutoSuggestionBox/static/js/main.33817d5c.chunk.js"
   },
   {
