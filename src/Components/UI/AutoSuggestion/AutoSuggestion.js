@@ -14,7 +14,6 @@ class AutoSuggestion extends Component {
         activeIndex: -1
     }
 
-
     getData = () => {
         this.setState({
             isDownloading: true
@@ -30,8 +29,6 @@ class AutoSuggestion extends Component {
             })
         });
     }
-
-
 
     filterData = search => {
         const { data } = this.state;
@@ -90,7 +87,7 @@ class AutoSuggestion extends Component {
             }
             case 13: {
                 //enter
-                const {options} = this.state;
+                const { options } = this.state;
                 if (options.length && oldActiveIndex >= 0 && oldActiveIndex <= options.length) {
                     this.setState({
                         showOptions: false,
@@ -122,31 +119,36 @@ class AutoSuggestion extends Component {
 
     render() {
         return (
-            <div>
-                <div>auggestion search box</div>
-                <input
-                    onChange={this.onchange}
-                    value={this.state.keyword}
-                    onKeyDown={this.keyDown}
-                ></input>
-                {
-                    this.state.showOptions && (
-                        <ul>
-                            {
-                                this.state.options.map((option, index) => {
-                                    const classes = ['option'];
-                                    if(index === this.state.activeIndex)
-                                    classes.push('active');
-                                    return (
-                                        <li key={option.name} className={classes.join(' ')}>
-                                            {option.name}
-                                        </li>
-                                    );
-                                })
-                            }
-                        </ul>
-                    )
-                }
+            <div className="suggestionbox-container">
+                <div className="suggestionbox-label">Search</div>
+                <div className="suggestionbox-wrapper">
+                    <input
+                        onChange={this.onchange}
+                        value={this.state.keyword}
+                        onKeyDown={this.keyDown}
+                        className="suggestionbox"
+                    ></input>
+                    {
+                        this.state.showOptions && (
+                            <div className="suggestionbox-options-wrapper">
+                                <ul className="suggestionbox-options">
+                                    {
+                                        this.state.options.map((option, index) => {
+                                            const classes = ['option'];
+                                            if (index === this.state.activeIndex)
+                                                classes.push('active');
+                                            return (
+                                                <li key={option.name} className={classes.join(' ')}>
+                                                    {option.name}
+                                                </li>
+                                            );
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        )
+                    }
+                </div>
             </div>
         );
     };
